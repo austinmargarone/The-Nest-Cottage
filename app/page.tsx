@@ -97,15 +97,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="photos" aria-labelledby="photos-title">
+      <section className="section" id="tour" aria-labelledby="tour-title">
+        <div className="wrap">
+          <h2 id="tour-title" className="centered">Virtual tour</h2>
+          <p className="lede centered">Walk through every room of The Nest Cottage in 3D.</p>
+          <div className="tour">
+            <iframe
+              src="https://my.matterport.com/show/?m=UFpAPNqqYGc"
+              title="3D virtual tour of The Nest Cottage"
+              loading="lazy"
+              allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="photos" aria-labelledby="photos-title" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <h2 id="photos-title" className="centered">Photos</h2>
           <Gallery photos={photos} />
           <div className="btn-row centered-row">
-            <a className="btn" href={site.matterport} target="_blank" rel="noopener">
-              Take the virtual tour
-            </a>
-            <a className="btn btn-quiet" href={site.furnishedFinder} target="_blank" rel="noopener">
+            <a className="btn" href={site.furnishedFinder} target="_blank" rel="noopener">
               View listing
             </a>
           </div>
