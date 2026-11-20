@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 type Photo = { src: string; alt: string; width: number; height: number };
 
-export default function Gallery({ photos, initial = 9 }: { photos: Photo[]; initial?: number }) {
+export default function Gallery({ photos, initial = 12 }: { photos: Photo[]; initial?: number }) {
   const [showAll, setShowAll] = useState(false);
   const [index, setIndex] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
