@@ -33,7 +33,7 @@ export default function Home() {
       <img
         className="hero-photo"
         src="/photos/hero.jpg"
-        alt="The Nest Cottage from above, with Lake Ontario behind the Forest Lawn neighborhood"
+        alt="The front of The Nest Cottage from above, with its deck, gardens and Forest Lawn Road"
         fetchPriority="high"
       />
 
