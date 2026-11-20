@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "@fontsource/young-serif/400.css";
 import "@fontsource-variable/figtree";
 import "./globals.css";
 import Header from "@/components/Header";

@@ -25,7 +25,7 @@ export const areas: Area[] = [
     name: "Webster",
     distance: "Right here",
     intro:
-      "Our hometown, a suburb on Lake Ontario and Irondequoit Bay, northeast of Rochester. Its motto is “Where life is worth living,” and the parks, trails and water make the case.",
+      "Webster is an outdoors enthusiast’s paradise. Gorgeous parks, trails and walking paths. Lake Ontario and Irondequoit Bay are both highlights.",
     eat: [
       { name: "Taka House Japanese Restaurant", note: "Our go-to for takeout.", address: "809 Ridge Rd", url: "http://takahouse.com/" },
       { name: "Ferrari Pizza Bar", note: "Our favorite pizza.", address: "1900 Empire Blvd", url: "https://www.ferraripizza.com/" },
@@ -68,7 +68,7 @@ export const areas: Area[] = [
     name: "Rochester",
     distance: "About 20 minutes",
     intro:
-      "The Flower City is a short drive west, with big parks on the lake, great museums and a lot of good food.",
+      "Although Webster can keep you busy exploring, don’t forget about the City of Rochester. There is so much to do and see. Everything on this list is just about a 20-minute drive from The Nest Cottage. ROC, Flour City and Flower City are all terms of endearment for our fair city.",
     eat: [
       { name: "Fiamma Centro", note: "Our top pick for Italian.", address: "4 Elton St", url: "https://fiammarochester.com/" },
       { name: "Hose 22", note: "Trisha's pick.", address: "56 Stutson St", url: "https://www.hose22.com/" },
@@ -108,9 +108,9 @@ export const areas: Area[] = [
   {
     slug: "erie-canal",
     name: "Erie Canal",
-    distance: "About 25 minutes",
+    distance: "About 24 minutes",
     intro:
-      "Fairport, Pittsford and Bushnell's Basin sit right on the canal. Walk the towpath, watch the boats go under the lift bridge, and stay for dinner.",
+      "It would be a shame to come to the area and not see the Erie Canal. I grew up in Fairport, a charming village that lies along the canal. I absolutely adore the canal and the village of Fairport. You will too. It’s just a 24-minute drive from The Nest Cottage. I also put in some options in the village of Pittsford and the hamlet of Bushnell’s Basin. Both are charming places you should see as well.",
     eat: [
       { name: "Mulconry's Irish Pub", note: "Our pick.", address: "17 Liftbridge Ln E., Fairport", url: "http://mulconrys.com/" },
       { name: "Moonlight Creamery", note: "Best ice cream.", address: "36 West Ave, Fairport", url: "https://moonlightcreamery.com/" },
@@ -154,7 +154,7 @@ export const areas: Area[] = [
     name: "Finger Lakes",
     distance: "A day trip",
     intro:
-      "There are eleven Finger Lakes (twelve, if you count Cazenovia), and you should see at least one. Skaneateles is Trisha's favorite.",
+      "This Upstate girl would be remiss if I didn’t encourage you to see at least one of the 11 Finger Lakes while you are here visiting. If you have the time, they are absolutely stunning and well worth the journey. My favorite Finger Lake is Skaneateles Lake. Nothing compares in my book. The three runners-up are Canandaigua Lake, Cayuga Lake and Seneca Lake.",
     eat: [
       { group: "Skaneateles", name: "Rosalie's Cucina", note: "Italian.", address: "841 W. Genesee St", url: "https://www.rosaliescucina.com/" },
       { group: "Skaneateles", name: "The Sherwood Inn", note: "Lake views.", address: "26 W. Genesee St", url: "https://sherwoodinns.com/" },
@@ -196,12 +196,15 @@ export const areas: Area[] = [
 ];
 
 export const drivingTour = {
-  intro:
-    "Webster's best views are along the bay and the lake. Bring comfortable shoes, and bikes if you have them.",
+  intro: [
+    "The best things about living in Webster are the proximity to the bay, the lake and all the incredible parks, fields and trails. We visit a field or park in the area daily. On the weekend we enjoy taking a drive down Lake Road to Pultneyville. I put together this driving tour so that you can see all the beauty that Webster has to offer.",
+    "Tip: be sure to bring comfortable hiking boots or sneakers, and possibly your bikes, on your journey.",
+  ],
   stops: [
-    { title: "Start at the Bay Bridge", text: "Take the Bay Road exit north toward Lake Road and turn left. You'll pass Sandbar Park and reach the Irondequoit Bay outlet, where the swing bridge is closed to cars from April through November. Mayer's Marina, on the left, has a pier for looking out at the shoreline and the boats." },
-    { title: "Head east on Lake Road", text: "Around Vosburg Road you'll find fields and trails: the Hojack Trail (3.5 miles, Lake Road to Phillips Road), Vosburg Hollow, the Gosnell trails, Big Woods and Big Field, and Whiting Road Nature Preserve." },
-    { title: "Stop at Webster Park", text: "Parking, a fishing pier, paths along the water, playgrounds (two toddler-friendly ones off the second Holt Road lot), seasonal tennis and pickleball courts, and restrooms." },
-    { title: "Keep going to Pultneyville", text: "About 12 minutes and 9.5 miles further east on Lake Road. B. Forman Park, on the lake side, has a playground, restrooms and charcoal grills for a picnic. Open seasonally." },
+    { title: "Start at the Bay Bridge", text: ["Drive over the Bay Bridge and exit on Bay Road heading north towards Lake Road. Take a left: you will pass Sandbar Park. Continue to the end, the Irondequoit Bay Outlet Bridge. The “Swing Bridge” is closed to cars April through November so that boats have access from Irondequoit Bay to Lake Ontario.", "Mayer’s Marina will be on your left. You can park on the right-hand side and walk along the short walkway that leads out to a pier. Stop and take in the stunning vista of the shoreline, the birds and all the boating activity."] },
+    { title: "Head east on Lake Road", text: ["Continue on your journey heading east back down Lake Road. Pass Bay Road. You will come to Vosburg Road shortly, on your right. You might consider taking a detour, as there are gobs of beautiful fields and connecting trails that run across Webster.", "The Hojack Trail, Vosburg Hollow, Gosnell Trails, Gosnell Big Woods Preserve, Gosnell Big Field, Whiting Road Nature Preserve and Webster County Park are all worth a visit. If you brought your bikes, you might want to ride the 3.5-mile multi-use Hojack Trail. It runs from Lake Road to Phillips Road."] },
+    { title: "Take a rest at Webster Park", text: ["After you’re done enjoying the trails, head back to Lake Road via Baker Road. As you continue down Lake Road, be sure to take a rest at Webster Park. On your left-hand side you will find an ample parking lot. Park and walk over the bridge across the creek, and you will come to the large fishing pier. If you continue up the path, you will take in stunning views through the trees.", "If you have children, there is a playground just at Holt Road (on the southeast side of Lake Road) where the kiddos can get out and run and play. If they are very young, go a short hop down Holt Road to the second parking lot on your right. Park there and cross over the creek, and you will find two playgrounds that are age-appropriate for toddlers. If you like tennis or pickleball, take the very next road; it will wind up to the courts. There are bathrooms there as well. Open seasonally."] },
+    { title: "Lunch at County Line Road", text: ["Now that everyone is back in the car, head back to Lake Road and continue east. You will reach the end of town at County Line Road. Are you hungry? We used to send everyone to Rustic Taco, just over the county line. Sadly, that location has closed, but the restaurant has moved to the village of Fairport, and it’s still worth the trip."] },
+    { title: "Bonus: Pultneyville", text: ["If you decide to continue to Pultneyville, you will have a 12-minute, 9.5-mile drive down Lake Road. There is a lovely park, B. Forman Park, just past Pultneyville on the lake side. There are restrooms and a playground. Open seasonally.", "Grab the blanket we provide and sit out and enjoy the stunning view. There are charcoal grills available, and if you choose to pack a picnic, feel free to use the cooler from the mud room."] },
   ],
 };

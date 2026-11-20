@@ -1,11 +1,14 @@
 // Guest info and "What to pack".
 
 export const houseRules = [
-  { title: "Check-in and check-out", text: "Check-in is at 3:00 pm and check-out is by 11:00 am. We're flexible when we can be, so just ask." },
-  { title: "Up to two guests", text: "The cottage sleeps a maximum of two guests." },
-  { title: "Renter must be 25+", text: "The person booking needs to be 25 or older." },
-  { title: "No parties or pets", text: "Parties aren't allowed and we can't host pets. If you need boarding, book ahead. Paws and Claws in Rochester, (585) 600-7297, is one option. We don't get anything for recommending them." },
-  { title: "Quiet hours, 10 pm to 9 am", text: "Forest Lawn is a small lakeside community, so we ask guests to keep things quiet overnight." },
+  { title: "Check-in: 3:00 pm", text: "Flexible when permissible." },
+  { title: "Check-out: 11:00 am", text: "Flexible when permissible." },
+  { title: "Max of 2 guests", text: "The Nest Cottage sleeps a maximum of two guests." },
+  { title: "Age requirement", text: "You must be 25 or older to book The Nest Cottage." },
+  { title: "No parties", text: "We do not allow parties at this property. Yes, we are officially party poopers." },
+  { title: "No pets", text: "Although we love fur babies, we cannot accommodate pets. It is our policy for the comfort of all our guests. Trust me, no one wants to be sneezing and sniffling due to allergies. \"ACHOO!\" \"Bless you!\"" },
+  { title: "Local boarding tip", text: "If you need a boarding option, we recommend that you book in advance. When we travel, we board Madi, and she loves it! Paws and Claws, (585) 600-7297, 23 Linden Park, Rochester, NY. And no, we get nothing for this recommendation. Zip, zero, nothing, I tell you!" },
+  { title: "Quiet hours: 10:00 pm to 9:00 am", text: "The Nest Cottage is located in a wonderful lakeside community called Forest Lawn. We appreciate that you kindly respect our friends and neighbors by keeping the noise down after 10 pm and before 9 am. Thank you so very much. This way everyone can enjoy the lakeside location." },
 ];
 
 export const bestTimes = [
@@ -35,8 +38,8 @@ export const temps = [
 const summer = ["Tank tops", "Short- and long-sleeve tees", "A light sweater", "Shorts", "Pants or jeans", "Flip flops", "Sneakers"];
 
 export const packing = [
-  { season: "Summer", note: "Pleasant, sometimes wet, muggy or hot.", items: summer },
-  { season: "Fall", note: "Usually gorgeous, with amazing color.", items: [...summer, "A heavy sweater", "A light water-resistant jacket", "Fleece or a vest", "Hiking boots", "Rain boots", "Hat, scarf and gloves"] },
-  { season: "Winter", note: "Beautiful, and a lot more fun when you're dressed for it.", items: [...summer.filter((i) => i !== "Flip flops"), "A heavy sweater", "A quilted jacket or anorak", "Fleece or a vest", "Snow boots", "Hat, scarf and gloves"] },
-  { season: "Spring", note: "Damp and chilly early on (locals call it mud season). Late spring, when everything blooms, is the best of it.", items: [...summer, "A light water-resistant jacket", "Fleece", "Hiking boots", "Rain boots", "Hat, scarf and gloves"] },
+  { season: "Summer", note: "Summer can be beautifully pleasant, or wet, muggy, hot and humid.", items: summer },
+  { season: "Fall", note: "Fall is usually gorgeous, not too hot or too cool, and the colors are amazing.", items: [...summer, "A heavy sweater", "A light water-resistant jacket", "Fleece or a vest", "Hiking boots", "Rain boots", "Hat, scarf and gloves"] },
+  { season: "Winter", note: "Winter is beautiful, but come prepared, as it is more fun if you are dressed for the weather.", items: [...summer.filter((i) => i !== "Flip flops"), "A heavy sweater", "A quilted jacket or anorak", "Fleece or a vest", "Snow boots", "Hat, scarf and gloves"] },
+  { season: "Spring", note: "Spring is often damp and bone-chilling. I call it \"Mud Season.\" It's best in late spring, when everything is in bloom. Come prepared for whatever may be.", items: [...summer, "A light water-resistant jacket", "Fleece", "Hiking boots", "Rain boots", "Hat, scarf and gloves"] },
 ];

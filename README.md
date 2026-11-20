@@ -9,12 +9,23 @@ Almost everything lives in `content/`:
 - `content/site.ts`: phone, email, links, quick facts, reviews, and the "What's inside" list
 - `content/stay.ts`: house rules, weather, packing lists
 - `content/guide.ts`: the local guide (Eat, See, Shop for each area) and the driving tour
+- `content/blog.json`: the 18 blog posts imported from WordPress (title, date and HTML for each)
 
 ## Photos
 
 - `public/photos/gallery/`: every image here shows up in the gallery, in file-name order. Name files like `05-front-porch.jpg`. The words after the number become the alt text.
 - `public/photos/hero.jpg`, `living.jpg`, `porch-view.jpg`, `madi.jpg`: the large photos on the home page.
 - Keep images around 1800–2400 px wide and under ~500 KB.
+
+## Blog photos
+
+Blog images still load from the old WordPress site until you copy them here. Upload each one to `public/photos/blog/` with its original file name (for example `20230815_180131.jpg`) and the site switches to the local copy on the next build. Do this before you shut WordPress down.
+
+To re-import posts from a new WordPress export:
+
+```bash
+python3 scripts/wp2blog.py WordPress.xml content/blog.json public/photos/blog images-needed.txt
+```
 
 ## Run locally
 

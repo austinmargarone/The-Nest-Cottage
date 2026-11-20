@@ -3,7 +3,7 @@ import Link from "next/link";
 import AreaList from "@/components/AreaList";
 import ContactStrip from "@/components/ContactStrip";
 import Gallery from "@/components/Gallery";
-import { amenities, reviews, site, stayFacts } from "@/content/site";
+import { listing, reviews, site, stayFacts } from "@/content/site";
 import { getGalleryPhotos } from "@/lib/photos";
 
 export default function Home() {
@@ -12,144 +12,162 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <img
-          className="hero-photo"
-          src="/photos/hero.jpg"
-          alt="The Nest Cottage on the Lake Ontario shore in Webster, NY"
-          fetchPriority="high"
-        />
-        <div className="wrap">
-          <div className="hero-panel">
-            <h1>A cottage on Lake Ontario for your next contract</h1>
-            <p className="lede">
-              Furnished stays of 4 to 13+ weeks in Webster, NY, about 15 minutes from Rochester
-              General Hospital. Hosted by Michael and Trisha, who live in Webster too.
-            </p>
-            <div className="btn-row">
-              <a className="btn" href={site.furnishedFinder} target="_blank" rel="noopener">
-                Check dates on Furnished Finder
-              </a>
-              <Link className="btn btn-quiet" href="/contact">
-                Ask us a question
-              </Link>
-            </div>
+        <div className="wrap hero-inner">
+          <img className="hero-logo" src="/brand/logo-light.png" alt="The Nest Cottage" width={300} height={346} />
+          <h1>Be our guest</h1>
+          <p className="lede">
+            A charming cottage in the Forest Lawn community on Lake Ontario in Webster, NY.
+            We specialize in renting to travel nurses, for stays of 4 to 13+ weeks.
+          </p>
+          <div className="btn-row">
+            <a className="btn btn-light" href={site.furnishedFinder} target="_blank" rel="noopener">
+              View listing
+            </a>
+            <Link className="btn btn-outline-light" href="/contact">
+              Contact us
+            </Link>
           </div>
-          <dl className="facts">
-            {stayFacts.map((f) => (
-              <div key={f.label}>
-                <dt>{f.label}</dt>
-                <dd>{f.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
+
+      <img
+        className="hero-photo"
+        src="/photos/hero.jpg"
+        alt="The Nest Cottage from above, with Lake Ontario behind the Forest Lawn neighborhood"
+        fetchPriority="high"
+      />
+
+      <div className="wrap">
+        <dl className="facts">
+          {stayFacts.map((f) => (
+            <div key={f.label}>
+              <dt>{f.label}</dt>
+              <dd>{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
 
       <section className="section" id="the-cottage">
         <div className="wrap split">
-          <div>
-            <h2>Welcome to the Nest</h2>
-            <p>
-              We&apos;re Michael and Trisha, empty nesters from Webster, along with our Cavalier King
-              Charles Spaniel, Madi. For our 35th anniversary in 2022 we bought a little cottage in
-              Forest Lawn, a lakeside neighborhood on Lake Ontario, and named it The Nest.
-            </p>
-            <p>
-              We rent it mostly to travel nurses on 4 to 13+ week contracts. Our goal is simple: a
-              safe, comfortable home away from home, with everything you need already there, so
-              you can focus on work and enjoy your time off.
-            </p>
-            <p>
-              Questions? Call or text Trisha at <a href={site.phoneHref}>{site.phone}</a>.
-            </p>
-          </div>
           <figure className="madi">
-            <img src="/photos/madi.jpg" alt="Madi, a black-and-white Cavalier King Charles Spaniel, standing in the grass" loading="lazy" />
-            <figcaption>Madi, our official greeter</figcaption>
+            <img src="/photos/madi.jpg" alt="Madi, a Cavalier King Charles Spaniel, standing in the grass" loading="lazy" />
+            <figcaption>Madi, our Cavalier King Charles Spaniel</figcaption>
           </figure>
-        </div>
-      </section>
-
-      <section className="section inside" style={{ paddingTop: 0 }} aria-labelledby="inside-title">
-        <div className="wrap">
-          <img className="inside-photo" src="/photos/living.jpg" alt="The living room, with the fireplace, dining nook and kitchen beyond" loading="lazy" />
-          <div className="inside-body">
-            <h2 id="inside-title">What&apos;s inside</h2>
-            <ul className="rules">
-              {amenities.map((a) => (
-                <li key={a.title}>
-                  <h3>{a.title}</h3>
-                  <p>{a.text}</p>
-                </li>
-              ))}
-            </ul>
+          <div className="centered">
+            <h2>All about us</h2>
+            <p>
+              We are empty nesters living in Webster, NY, with our adorable Cavalier King Charles
+              Spaniel, <span className="hl">Madi</span>. In 2022, in celebration of our 35th wedding
+              anniversary, we invested in the most charming cottage. We named it{" "}
+              <span className="hl">The Nest Cottage</span>.
+            </p>
+            <p>
+              It is located in our favorite little community of Forest Lawn along Lake Ontario. We
+              look forward to hosting our family, friends and rental guests. We can’t wait to fill The
+              Nest Cottage with love and joy and to make special memories there.
+            </p>
+            <p>
+              Our mission is to provide our guests a safe, comfortable “Nest,” a home away from home.
+            </p>
+            <p>
+              We hope that you will come and <em className="hl">be our guest</em>.
+            </p>
+            <p className="signature">Michael and Trisha</p>
           </div>
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }} id="photos">
+      <section className="section band" aria-labelledby="listing-title">
         <div className="wrap">
-          <div className="gallery-head">
+          <h2 id="listing-title" className="centered">The Nest Cottage</h2>
+          <ul className="highlights">
+            {listing.highlights.map((h) => (
+              <li key={h}>{h}</li>
+            ))}
+          </ul>
+          <div className="listing-body">
+            <img src="/photos/living.jpg" alt="The living room, with the fireplace, dining banquette and kitchen beyond" loading="lazy" />
             <div>
-              <h2>Take a look around</h2>
-              <p>Every room, plus the gardens and the lake. Want to walk through it? Try the 3D tour.</p>
+              {listing.description.map((p) => (
+                <p key={p.slice(0, 20)}>{p}</p>
+              ))}
             </div>
-            <a className="btn btn-quiet" href={site.matterport} target="_blank" rel="noopener">
-              Walk through the 3D tour
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="photos" aria-labelledby="photos-title">
+        <div className="wrap">
+          <h2 id="photos-title" className="centered">Photos</h2>
+          <Gallery photos={photos} />
+          <div className="btn-row centered-row">
+            <a className="btn" href={site.matterport} target="_blank" rel="noopener">
+              Take the virtual tour
+            </a>
+            <a className="btn btn-quiet" href={site.furnishedFinder} target="_blank" rel="noopener">
+              View listing
             </a>
           </div>
-          <Gallery photos={photos} />
         </div>
       </section>
 
       <section className="section reviews" aria-labelledby="reviews-title">
         <div className="wrap">
-          <h2 id="reviews-title">What our guests say</h2>
+          <h2 id="reviews-title" className="centered">Reviews</h2>
           <div className="review-grid">
             {reviews.map((r) => (
-              <figure className="review" key={r.name} style={{ margin: 0 }}>
+              <figure className="review" key={r.name}>
+                <p className="stars" aria-label="5 out of 5 stars">★★★★★</p>
+                <h3>{r.title}</h3>
                 <blockquote>
-                  <h3>{r.title}</h3>
-                  <p>{r.text}</p>
+                  <p>“{r.text}”</p>
                 </blockquote>
-                <footer>
-                  <strong>{r.name}</strong>, {r.stay.toLowerCase()}, {r.date}
-                </footer>
+                <figcaption>
+                  <strong>{r.name}</strong>, {r.date}
+                </figcaption>
               </figure>
             ))}
           </div>
-          <p style={{ marginTop: "2.5rem", marginBottom: 0 }}>
-            <a href={site.furnishedFinderReviews} target="_blank" rel="noopener">
-              Read all reviews on Furnished Finder
+          <p className="centered" style={{ marginTop: "2.5rem", marginBottom: 0 }}>
+            <a className="btn btn-outline-light" href={site.furnishedFinderReviews} target="_blank" rel="noopener">
+              More reviews on Furnished Finder
             </a>
           </p>
         </div>
       </section>
 
-      <section className="lake-band" aria-labelledby="location-title">
-        <img src="/photos/porch-view.jpg" alt="Looking from the front deck down Forest Lawn Road to Lake Ontario" loading="lazy" />
+      <section className="section" aria-labelledby="location-title">
         <div className="wrap">
-          <div className="lake-band-text">
-            <h2 id="location-title">Forest Lawn, on the lake</h2>
-            <p>
-              Forest Lawn is a lakeside neighborhood of about 60 homes in Webster, founded in 1888
-              and still known for its traditions and summer celebrations. Webster sits on Lake
-              Ontario and Irondequoit Bay, a short drive northeast of Rochester.
-            </p>
-            <p>
-              {site.address.street}, {site.address.city}, {site.address.state} {site.address.zip}
-            </p>
+          <h2 id="location-title" className="centered">Our location</h2>
+          <div className="location">
+            <img src="/photos/porch-view.jpg" alt="Looking from the front deck down Forest Lawn Road to Lake Ontario" loading="lazy" />
+            <div className="location-text">
+              <h3>Webster, New York</h3>
+              <p>
+                Webster is a suburb located on the northeast side of Rochester, perched along Lake
+                Ontario and Irondequoit Bay. The town’s motto is{" "}
+                <em className="hl">“Where Life is Worth Living.”</em> It is a beautiful place to soak in
+                the views of the water and to live among wonderful, community-driven residents.
+              </p>
+              <h3>Forest Lawn Community</h3>
+              <p>
+                The Forest Lawn Community just celebrated its 135th anniversary. This is a charming
+                lakeside neighborhood of around 60 homes. It is a tight-knit neighborhood that is
+                steeped in traditions and celebrations.
+              </p>
+              <p>
+                <Link href="/blog/the-nest-cottage-the-forest-lawn-community">Read the history of Forest Lawn</Link>
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="guide-title">
+      <section className="section band" aria-labelledby="guide-title">
         <div className="wrap">
-          <h2 id="guide-title">Our local guide</h2>
-          <p className="lede">
-            Where we eat, what we see and where we shop, from right here in Webster out to the
-            Finger Lakes.
-          </p>
+          <h2 id="guide-title" className="centered">Local destinations</h2>
+          <p className="lede centered">Where to eat, what to see and where to shop while you’re here.</p>
           <AreaList />
         </div>
       </section>

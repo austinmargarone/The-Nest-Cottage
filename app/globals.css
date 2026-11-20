@@ -1,32 +1,33 @@
 /* The Nest Cottage
-   Palette taken from a Lake Ontario morning: fog, slate water, shoreline pines,
-   and one marigold line for the sun on the horizon. */
+   Carries over the old site's look: the charcoal and gray of the logo, white pages with
+   light gray bands, centered copy in the hosts' voice, and highlighted words in a slate blue
+   taken from the cottage siding. */
 
 :root {
-  --fog: #eef1ee;
-  --paper: #fafbf9;
-  --ink: #1b2a30;
-  --ink-soft: #46565c;
-  --lake: #2c4858;
-  --lake-deep: #1f3542;
-  --pine: #3b5844;
-  --sun: #d9a62e;
-  --line: #cbd3ce;
+  --fog: #ffffff;
+  --paper: #f3f3f3;
+  --ink: #2b2b2b;
+  --ink-soft: #5a5a5a;
+  --lake: #3b3b3b;
+  --lake-deep: #262626;
+  --pine: #4d6a80;
+  --sun: #4d6a80;
+  --logo: #8c8c8c;
+  --line: #dddddd;
 
-  --serif: "Young Serif", Georgia, serif;
+  --serif: "Figtree Variable", system-ui, sans-serif;
   --sans: "Figtree Variable", system-ui, sans-serif;
 
-  /* Type scale, roughly a major third */
   --t-sm: 0.875rem;
   --t-base: 1.0625rem;
-  --t-md: 1.3rem;
-  --t-lg: 1.65rem;
-  --t-xl: clamp(2rem, 4vw, 2.6rem);
-  --t-hero: clamp(2.5rem, 6.4vw, 4.75rem);
+  --t-md: 1.25rem;
+  --t-lg: 1.5rem;
+  --t-xl: clamp(1.9rem, 3.6vw, 2.5rem);
+  --t-hero: clamp(2.6rem, 6vw, 4.25rem);
 
   --wrap: 72rem;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
-  --space: clamp(4rem, 9vw, 7.5rem);
+  --space: clamp(3.5rem, 8vw, 6.5rem);
 }
 
 *,
@@ -76,9 +77,9 @@ h1,
 h2,
 h3 {
   font-family: var(--serif);
-  font-weight: 400;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   margin: 0 0 0.6em;
   text-wrap: balance;
 }
@@ -102,6 +103,35 @@ p {
 
 .section {
   padding-block: var(--space);
+}
+.band {
+  background: var(--paper);
+}
+.centered {
+  text-align: center;
+}
+.centered p,
+p.centered,
+.centered .lede,
+.lede.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.centered-row {
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.hl {
+  color: var(--pine);
+  font-weight: 700;
+}
+.signature {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--pine);
+}
+.signature::before {
+  content: "– ";
 }
 
 .lede {
@@ -128,9 +158,12 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.8rem 1.35rem;
-  border-radius: 999px;
-  font: 600 var(--t-base) / 1 var(--sans);
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  border-radius: 3px;
+  font: 700 var(--t-sm) / 1 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
   border: 1.5px solid var(--lake);
   background: var(--lake);
@@ -151,6 +184,26 @@ p {
 .btn-quiet:hover {
   background: var(--lake);
   color: var(--paper);
+}
+.btn-light {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+}
+.btn-light:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+.btn-outline-light {
+  background: transparent;
+  border-color: #bdbdbd;
+  color: #fff;
+}
+.btn-outline-light:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
 }
 .btn-row {
   display: flex;
@@ -179,8 +232,11 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: var(--serif);
-  font-size: 1.35rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
   white-space: nowrap;
@@ -261,38 +317,43 @@ p {
 
 /* ---------- Hero ---------- */
 
+/* The old site opened on the logo on charcoal; this keeps that */
 .hero {
-  position: relative;
+  background: var(--lake);
+  color: #fff;
+  text-align: center;
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-logo {
+  width: clamp(10rem, 22vw, 15rem);
+  height: auto;
+  margin-bottom: 1.75rem;
+  opacity: 0.9;
+}
+.hero h1 {
+  margin-bottom: 0.35em;
+}
+.hero .lede {
+  color: #d6d6d6;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+}
+.hero .btn-row {
+  justify-content: center;
 }
 .hero-photo {
   width: 100%;
-  height: min(78vh, 46rem);
+  height: min(70vh, 42rem);
   object-fit: cover;
 }
-/* The horizon: one marigold line where the photo meets the text */
-.hero-panel {
-  position: relative;
-  margin-top: -7rem;
-  background: var(--fog);
-  max-width: 46rem;
-  padding: 2.25rem var(--gutter) 0 0;
-  border-top: 4px solid var(--sun);
-}
-.hero-panel h1 {
-  margin-bottom: 0.4em;
-}
-.hero-panel .lede {
-  max-width: 34rem;
-  margin-bottom: 1.75rem;
-}
-
 @media (max-width: 40rem) {
   .hero-photo {
-    height: 52vh;
-  }
-  .hero-panel {
-    margin-top: -2.5rem;
-    padding-top: 1.5rem;
+    height: 48vh;
   }
 }
 
@@ -302,9 +363,10 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
   gap: 1.5rem 2rem;
-  margin: 3.5rem 0 0;
-  padding: 1.75rem 0 0;
-  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
 }
 .facts dt {
   font-size: var(--t-sm);
@@ -312,7 +374,7 @@ p {
 }
 .facts dd {
   margin: 0.2rem 0 0;
-  font-family: var(--serif);
+  font-weight: 700;
   font-size: var(--t-md);
 }
 
@@ -323,6 +385,9 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 6vw, 5rem);
   align-items: center;
+}
+.split .centered p {
+  font-weight: 500;
 }
 .split img {
   width: 100%;
@@ -449,25 +514,32 @@ p {
 .review-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 6vw, 5rem);
+  gap: clamp(2rem, 5vw, 4rem);
   margin-top: 2.5rem;
+}
+.review {
+  margin: 0;
 }
 .review blockquote {
   margin: 0;
+}
+.review .stars {
+  color: #d9c38a;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
 }
 .review h3 {
   font-size: var(--t-lg);
 }
 .review p {
-  color: #dfe7e9;
+  color: #dcdcdc;
 }
-.review footer {
+.review figcaption {
   font-size: var(--t-sm);
-  color: #b9c9cf;
+  color: #b5b5b5;
 }
-.review footer strong {
-  color: var(--paper);
-  font-weight: 600;
+.review figcaption strong {
+  color: #fff;
 }
 @media (max-width: 48rem) {
   .review-grid {
@@ -475,38 +547,51 @@ p {
   }
 }
 
-/* ---------- Lake band ---------- */
+/* ---------- Listing ---------- */
 
-.lake-band {
-  position: relative;
-  color: var(--paper);
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  font-weight: 700;
 }
-.lake-band img {
+.highlights li + li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 1rem 0.2rem;
+  border-radius: 50%;
+  background: var(--logo);
+}
+.listing-body,
+.location {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.listing-body img,
+.location img {
   width: 100%;
-  height: min(70vh, 38rem);
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: 2px;
 }
-.lake-band .wrap {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+.location {
+  margin-top: 2rem;
 }
-.lake-band-text {
-  max-width: 34rem;
-  background: rgba(27, 42, 48, 0.82);
-  padding: 1.75rem 2rem;
+.location-text h3 {
+  margin-top: 0.25rem;
 }
-.lake-band-text p:last-child {
-  margin-bottom: 0;
-}
-@media (max-width: 40rem) {
-  .lake-band .wrap {
-    position: static;
-    padding: 0;
-  }
-  .lake-band-text {
-    background: var(--ink);
-    padding: 2rem var(--gutter);
+@media (max-width: 52rem) {
+  .listing-body,
+  .location {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -515,6 +600,7 @@ p {
 .area-list {
   list-style: none;
   margin: 2.5rem 0 0;
+  text-align: center;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -529,15 +615,15 @@ p {
 .area-list a {
   display: grid;
   gap: 0.15rem;
-  padding: 1.75rem 1.5rem 1.75rem 0;
+  padding-block: 1.75rem;
   color: var(--ink);
   text-decoration: none;
 }
-.area-list li:nth-child(even) a {
-  padding-left: 1.5rem;
+.area-list a {
+  padding-inline: 1rem;
 }
 .area-name {
-  font-family: var(--serif);
+  font-weight: 700;
   font-size: var(--t-xl);
   line-height: 1.1;
 }
@@ -563,9 +649,6 @@ p {
   .area-list li:nth-child(odd) {
     border-right: 0;
   }
-  .area-list li:nth-child(even) a {
-    padding-left: 0;
-  }
 }
 
 .madi {
@@ -580,14 +663,8 @@ p {
 /* ---------- Contact strip ---------- */
 
 .contact-strip {
-  border-top: 4px solid var(--sun);
   background: var(--paper);
-}
-.contact-strip .wrap {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 2rem 4rem;
-  align-items: start;
+  border-top: 1px solid var(--line);
 }
 .contact-list {
   list-style: none;
@@ -602,15 +679,11 @@ p {
   color: var(--ink-soft);
 }
 .contact-list a {
-  font-family: var(--serif);
+  font-weight: 700;
   font-size: var(--t-md);
   word-break: break-word;
 }
-@media (max-width: 48rem) {
-  .contact-strip .wrap {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* ---------- Page header (inner pages) ---------- */
 
@@ -751,7 +824,7 @@ p {
   display: inline-block;
   padding: 0.5rem 1rem;
   border: 1.5px solid var(--line);
-  border-radius: 999px;
+  border-radius: 3px;
   color: var(--ink);
   text-decoration: none;
   font-weight: 500;
@@ -817,7 +890,7 @@ p {
 }
 .places li::before {
   content: counter(place);
-  font-family: var(--serif);
+  font-weight: 700;
   color: var(--ink-soft);
   padding-top: 0.1rem;
 }
@@ -870,7 +943,7 @@ p {
   border: 2px solid var(--sun);
   display: grid;
   place-items: center;
-  font-family: var(--serif);
+  font-weight: 700;
   font-size: var(--t-sm);
 }
 
@@ -1007,4 +1080,179 @@ p {
   * {
     transition: none !important;
   }
+}
+
+/* ---------- Q&A ---------- */
+
+.faq {
+  margin: 0;
+  display: grid;
+  gap: 1.75rem;
+  max-width: 46rem;
+}
+.faq dt {
+  font-weight: 700;
+  font-size: var(--t-md);
+  margin-bottom: 0.3rem;
+}
+.faq dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* ---------- Blog ---------- */
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 3rem 2rem;
+}
+.post-list a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+}
+.post-list img,
+.post-noimg {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  background: var(--paper);
+}
+.post-noimg {
+  display: grid;
+  place-items: center;
+  background: var(--lake);
+}
+.post-noimg img {
+  width: 30%;
+  aspect-ratio: auto;
+  margin: 0;
+  background: none;
+  opacity: 0.8;
+}
+.post-list time,
+.post-title + p time {
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+}
+.post-list h2 {
+  font-size: var(--t-md);
+  margin: 0.3rem 0 0.5rem;
+}
+.post-list p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.post-list a:hover h2 {
+  color: var(--pine);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.post-title {
+  font-size: var(--t-xl);
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+/* Post bodies come from WordPress; most were written centered, like the old site */
+.prose {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+.prose p,
+.prose li {
+  max-width: none;
+}
+.prose .c {
+  text-align: center;
+}
+.prose .r {
+  text-align: right;
+}
+.prose h2 {
+  font-size: var(--t-lg);
+  margin-top: 2.5rem;
+}
+.prose h3,
+.prose h4 {
+  font-size: var(--t-md);
+  margin-top: 2rem;
+}
+.prose img {
+  width: auto;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+.prose figure {
+  margin: 1.5rem 0;
+}
+.prose figcaption {
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+  text-align: center;
+}
+.prose .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+}
+.prose .gallery img {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.prose .gallery figure {
+  margin: 0;
+}
+.prose .callout {
+  background: var(--lake);
+  color: #e6e6e6;
+  padding: 1.5rem 1.75rem;
+  border-radius: 2px;
+  text-align: center;
+}
+.prose .callout a,
+.prose .callout .hl {
+  color: #fff;
+}
+.prose .cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5rem;
+}
+.prose a {
+  word-break: break-word;
+}
+.post-nav {
+  max-width: 46rem;
+  margin: 4rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.post-nav a {
+  display: grid;
+  gap: 0.2rem;
+  font-weight: 700;
+  max-width: 48%;
+}
+.post-nav span {
+  font-size: var(--t-sm);
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+.post-nav .newer {
+  text-align: right;
+  margin-left: auto;
 }

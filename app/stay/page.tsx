@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactStrip from "@/components/ContactStrip";
 import { bestTimes, houseRules, packing, temps } from "@/content/stay";
-import { site } from "@/content/site";
+import { faq, site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Guest info and what to pack",
@@ -21,8 +21,9 @@ export default function StayPage() {
       <header className="wrap page-head">
         <h1>Guest info</h1>
         <p className="lede">
-          The Nest is set up for travel nurses and other longer stays, usually 4 to 13+ weeks. Here
-          is what to know before you arrive. For anything else, call or text Trisha at{" "}
+          The Nest Cottage specializes in renting to travel nurses. Our mission is to provide our
+          guests a safe, comfortable “Nest,” a home away from home, for long-term (4-13+ week) stays.
+          For questions, concerns or special requests, do feel free to ask. Phone or text Trisha at{" "}
           <a href={site.phoneHref}>{site.phone}</a> or email{" "}
           <a href={`mailto:${site.email}`}>{site.email}</a>.
         </p>
@@ -39,11 +40,24 @@ export default function StayPage() {
         </ul>
       </section>
 
+      <section className="section wrap list-section" id="questions" style={{ paddingTop: 0 }}>
+        <h2>Q&amp;A</h2>
+        <dl className="faq">
+          {faq.map((f) => (
+            <div key={f.q}>
+              <dt>{f.q}</dt>
+              <dd>{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
       <section className="section wrap list-section" id="what-to-pack" style={{ paddingTop: 0 }}>
         <h2>What to pack</h2>
         <p className="lede">
-          Think layers. In Upstate New York the temperature can swing a lot in an hour, a day or a
-          week, in any season.
+          The Nest Cottage is located in the town of Webster, a suburb of Rochester in Upstate New
+          York. When packing, “Think Layers,” as the temperature can fluctuate widely in an hour, a
+          day or a week.
         </p>
 
         <h3 style={{ marginTop: "3rem" }}>Average highs and lows in Webster</h3>

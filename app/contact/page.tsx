@@ -35,7 +35,7 @@ export default function ContactPage() {
             </li>
             <li>
               <span>Address</span>
-              <p style={{ margin: 0, fontFamily: "var(--serif)", fontSize: "var(--t-md)" }}>
+              <p style={{ margin: 0, fontSize: "var(--t-md)" }}>
                 {site.address.street}
                 <br />
                 {site.address.city}, {site.address.state} {site.address.zip}

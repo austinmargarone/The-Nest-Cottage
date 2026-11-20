@@ -16,7 +16,9 @@ export default function DrivingTour() {
           <Link href="/guide">Local guide</Link>
         </p>
         <h1>Driving tour of Webster</h1>
-        <p className="lede">{drivingTour.intro}</p>
+        {drivingTour.intro.map((t) => (
+          <p className="lede" key={t.slice(0, 12)}>{t}</p>
+        ))}
         <GuideNav current="driving-tour" />
       </header>
       <section className="section wrap">
@@ -24,7 +26,9 @@ export default function DrivingTour() {
           {drivingTour.stops.map((s) => (
             <li key={s.title}>
               <h2 style={{ fontSize: "var(--t-lg)" }}>{s.title}</h2>
-              <p>{s.text}</p>
+              {s.text.map((t) => (
+                <p key={t.slice(0, 12)}>{t}</p>
+              ))}
             </li>
           ))}
         </ol>
