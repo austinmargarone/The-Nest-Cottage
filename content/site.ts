@@ -71,7 +71,7 @@ export const listing = {
 // From the old Q&A page.
 export const faq = [
   { q: "Is The Nest Cottage available to rent in July and August?", a: "No. We block out the months of July and August. This allows us a chance to enjoy \"The Nest,\" see our friends and family (and escape the heat of Arizona summers)." },
-  { q: "Why do we prefer to rent to travel nurses?", a: "We appreciate the work that travel nurses do for our community and the sacrifices they make. We want to provide them with a safe, secure and comfortable space (a nest for good eggs)." },
+  { q: "Who do we rent to?", a: "We welcome travel professionals and anyone who needs a furnished home for a month or more. We want to provide our guests with a safe, secure and comfortable space (a nest for good eggs)." },
   { q: "Does The Nest do short-term rentals?", a: "No. We rent for stays of 30 days or more." },
   { q: "What makes the Forest Lawn Community special?", a: "The Forest Lawn Community is a quiet neighborhood situated on the shores of Lake Ontario, in Webster, NY, a suburb of Rochester. There are plenty of parks, trails and woods that are easily accessible from \"The Nest.\"" },
   { q: "Will I have a long commute to the hospital?", a: "No. RGH (Rochester General Hospital), Highland Hospital, Strong Memorial and Unity Hospital are all a quick commute from The Nest Cottage." },
