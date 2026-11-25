@@ -17,7 +17,7 @@ export default function Home() {
           <h1>Be our guest</h1>
           <p className="lede">
             A charming cottage in the Forest Lawn community on Lake Ontario in Webster, NY.
-            We specialize in renting to travel nurses, for stays of 4 to 13+ weeks.
+            We specialize in renting to travel professionals for stays of one month or more.
           </p>
           <div className="btn-row">
             <a className="btn btn-light" href={site.furnishedFinder} target="_blank" rel="noopener">
@@ -57,21 +57,22 @@ export default function Home() {
           <div className="centered">
             <h2>All about us</h2>
             <p>
-              We are empty nesters living in Webster, NY, with our adorable Cavalier King Charles
-              Spaniel, <span className="hl">Madi</span>. In 2022, in celebration of our 35th wedding
-              anniversary, we invested in the most charming cottage. We named it{" "}
+              We are empty nesters living in Phoenix, Arizona, with our adorable Cavalier King Charles
+              Spaniel, Madeline, whom we dubbed <span className="hl">Madi</span>.
+            </p>
+            <p>
+              In 2022, in celebration of our 35th wedding anniversary, we invested in the most
+              charming cottage in Webster, NY. We named it{" "}
               <span className="hl">The Nest Cottage</span>.
             </p>
             <p>
               It is located in our favorite little community of Forest Lawn along Lake Ontario. We
-              look forward to hosting our family, friends and rental guests. We can’t wait to fill The
-              Nest Cottage with love and joy and to make special memories there.
+              come back to New York to enjoy it every summer. The rest of the year we extend it to
+              family, friends and rental guests.
             </p>
+            <p>Our mission is to provide a safe, comfortable “Nest,” a home away from home.</p>
             <p>
-              Our mission is to provide our guests a safe, comfortable “Nest,” a home away from home.
-            </p>
-            <p>
-              We hope that you will come and <em className="hl">be our guest</em>.
+              We hope you will come and <em className="hl">be our guest</em>.
             </p>
             <p className="signature">Michael and Trisha</p>
           </div>

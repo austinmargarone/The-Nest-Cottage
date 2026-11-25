@@ -21,8 +21,8 @@ export default function StayPage() {
       <header className="wrap page-head">
         <h1>Guest info</h1>
         <p className="lede">
-          The Nest Cottage specializes in renting to travel nurses. Our mission is to provide our
-          guests a safe, comfortable “Nest,” a home away from home, for long-term (4-13+ week) stays.
+          The Nest Cottage specializes in renting to travel professionals. Our mission is to provide
+          our guests a safe, comfortable “Nest,” a home away from home, for stays of one month or more.
           For questions, concerns or special requests, do feel free to ask. Phone or text Trisha at{" "}
           <a href={site.phoneHref}>{site.phone}</a> or email{" "}
           <a href={`mailto:${site.email}`}>{site.email}</a>.

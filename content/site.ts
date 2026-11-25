@@ -5,7 +5,7 @@ export const site = {
   legalName: "THENEST-COTTAGE LLC",
   url: "https://thenest-cottage.com",
   description:
-    "A lakeside cottage in Webster, NY, for travel nurses and longer stays near Rochester.",
+    "A lakeside cottage in Webster, NY, for travel professionals on stays of one month or more near Rochester.",
   address: {
     street: "533 Forest Lawn Road",
     city: "Webster",
@@ -32,7 +32,7 @@ export const nav = [
 
 // The quick facts under the hero.
 export const stayFacts = [
-  { label: "Stays", value: "4 to 13+ weeks" },
+  { label: "Stays", value: "Min 30 days" },
   { label: "Guests", value: "Up to 2" },
   { label: "Check-in", value: "3:00 pm" },
   { label: "Check-out", value: "11:00 am" },
@@ -63,7 +63,7 @@ export const listing = {
     "Curl up and relax in the open-plan living-dining room with garden and lake views. A large banquette with a stunning view of the lake is the perfect spot for dining. Cooks will enjoy the fully equipped kitchen with ample counterspace and stainless-steel appliances.",
     "Each bedroom is well-appointed with upholstered headboards, Queen-size Sealy mattresses, luxurious bamboo sheets and duvets. You will find plenty of storage in each of the closets that provide luggage racks and monogram robes. The charming bathroom has a shower with terrific water pressure. The laundry room is equipped with a full-size washer/dryer and more.",
     "You will love the views from the Sunroom with 3 sides of windows looking out to the garden and the lake. The outside patios have ample seating with garden and lake views.",
-    "Weekly trash pick-up, gardening and mowing services as well as snow removal are all included. Optional weekly cleaning and laundry services are available for an additional fee.",
+    "Weekly trash pick-up, gardening and mowing services as well as snow removal are all included.",
     "Located just a short drive from Rochester, you will feel like you're on vacation when you arrive.",
   ],
 };
@@ -72,7 +72,7 @@ export const listing = {
 export const faq = [
   { q: "Is The Nest Cottage available to rent in July and August?", a: "No. We block out the months of July and August. This allows us a chance to enjoy \"The Nest,\" see our friends and family (and escape the heat of Arizona summers)." },
   { q: "Why do we prefer to rent to travel nurses?", a: "We appreciate the work that travel nurses do for our community and the sacrifices they make. We want to provide them with a safe, secure and comfortable space (a nest for good eggs)." },
-  { q: "Does The Nest do short-term rentals?", a: "No. We rent for 4-13+ week stays." },
+  { q: "Does The Nest do short-term rentals?", a: "No. We rent for stays of 30 days or more." },
   { q: "What makes the Forest Lawn Community special?", a: "The Forest Lawn Community is a quiet neighborhood situated on the shores of Lake Ontario, in Webster, NY, a suburb of Rochester. There are plenty of parks, trails and woods that are easily accessible from \"The Nest.\"" },
   { q: "Will I have a long commute to the hospital?", a: "No. RGH (Rochester General Hospital), Highland Hospital, Strong Memorial and Unity Hospital are all a quick commute from The Nest Cottage." },
 ];
